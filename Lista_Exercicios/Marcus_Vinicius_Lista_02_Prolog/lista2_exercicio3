@@ -1,0 +1,13 @@
+3) Como que o Prolog responde a essas consultas:
+
+1. [a,b,c,d] = [a,[b,c,d]]. => Não unifica, resultando em "false".
+2. [a,b,c,d] = [a|[b,c,d]]. => Unifica, resultando em "true".
+3. [a,b,c,d] = [a,b,[c,d]]. => Não unifica, resultando em "false".
+4. [a,b,c,d] = [a,b|[c,d]]. => Unifica, resultando em "true.
+5. [a,b,c,d] = [a,b,c,[d]]. => Não unifica, resultando em "false".
+6. [a,b,c,d] = [a,b,c|[d]]. => Unifica, resultando em "true".
+7. [a,b,c,d] = [a,b,c,d,[]]. => Não unifica, resultando em "false".
+8. [a,b,c,d] = [a,b,c,d|[]]. => Unifica, resultando em "true".
+9. [] = [_|[]]. => Não unifica, resultando em "false".
+10. [] = [_]. => Não unifica, resultando em "false".
+11. [] = _. => Unifica, resultando em "true".

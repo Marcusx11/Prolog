@@ -1,0 +1,17 @@
+1) Verificando se as consultas abaixo unificam:
+
+- =(mia, mia). => Unificam
+- =(mia, vincent). => Unificam
+- = mia = mia => Unificam por serem o mesmo átomo
+- 2 = 2 => Unificam por serem o mesmo número
+- mia = vincent => Não unificam por não serem o mesmo átomo 
+- 'mia' = mia => Unificam
+- '2' = 2 => Não unificam
+- mia = X => Unifica
+- X = mia, X = vincent => Não Unifica. Uma variável não pode unificar com 2 coisas diferentes ao mesmo tempo
+- k(s(g), Y) = k(X, t(k)). => Unifica
+- k(s(g), t(k)) = k(X,t(Y)). => Unifica
+- loves(X,X) = loves(marcellus,mia). => Não Unifica
+- [Head|Tail] = [mia, vincent, jules, yolanda]. => Unifica, sendo a cabeça da lista a mia, e o resto dos elementos da calda sendo = [vincent, jules, yolanda]
+- [X,Y | W] = [[], dead(z), [2, [b, c]], [], Z]. => Unifica.
+- [_,X,_,Y|_] = [[], dead(z), [2, [b, c]], [], Z]. => Unifica apenas as partes que não aparecem variáveis anônimas
